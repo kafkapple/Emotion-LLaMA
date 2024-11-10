@@ -12,7 +12,7 @@ class CustomDumper(yaml.Dumper):
         if isinstance(value, str) and value == target_value_to_quote:
             style = '"'
         return super().represent_scalar(tag, value, style)
-
+# Path config change based on the place of the script
 class ConfigPath:
     def __init__(self):
         model_llama_dir = r"checkpoints\Llama-2-7b-chat-hf"
